@@ -86,11 +86,6 @@ class Benchmark {
                             
                             
                             self.model.stElapsedTime.value = stopwatch.elapsedTimeString()
-                            if !self.model.runInParallel.value {
-                                self.testFirestore()
-                            }
-                            
-                            print("Fim")
                         }
                     }
             })
@@ -122,14 +117,15 @@ class Benchmark {
                 
                 self.rtCallbacksQueue.sync {
                     self.rtCallbacks += 1
-                    
-                    
                     if self.rtCallbacks == Int(self.model.numberOfRecords.value!) {
                         
                         
                         self.model.rtElapsedTime.value = stopwatch.elapsedTimeString()
                         
-                        print("Fim")
+                        if !self.model.runInParallel.value {
+                            self.testFirestore()
+                        }
+
                     }
                 }
             })
