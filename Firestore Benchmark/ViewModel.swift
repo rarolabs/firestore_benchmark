@@ -18,14 +18,24 @@ class ViewModel {
     var rtInsertCalls = Observable<String?>("0")
     var rtTimeBeforeFirstInsert = Observable<String?>("0")
     var rtInserted = Observable<String?>("0")
-    var rtCallbacks = Observable<String?>("0")
-    var rtElapsedTime = Observable<String?>("0")
+    var rtInsertCallbacks = Observable<String?>("0")
+    var rtInsertElapsedTime = Observable<String?>("0")
+
+    var rtGetCalls = Observable<String?>("0")
+    var rtTimeBeforeFirstGet = Observable<String?>("0")
+    var rtGets = Observable<String?>("0")
+    var rtGetCallbacks = Observable<String?>("0")
+    var rtGetElapsedTime = Observable<String?>("0")
 
     var stInsertCalls = Observable<String?>("0")
     var stTimeBeforeFirstInsert = Observable<String?>("0")
     var stInserted = Observable<String?>("0")
-    var stCallbacks = Observable<String?>("0")
-    var stElapsedTime = Observable<String?>("0")
+    var stInsertCallbacks = Observable<String?>("0")
+    var stInsertElapsedTime = Observable<String?>("0")
 
-    
+    var stGetCalls = Observable<String?>("0")
+    var stTimeBeforeFirstGet = Observable<String?>("0")
+    var stGets = Observable<String?>("0")
+    var stGetCallbacks = Observable<String?>("0")
+    var stGetElapsedTime = Observable<String?>("0")
 }
